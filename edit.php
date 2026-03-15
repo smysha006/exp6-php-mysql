@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="style.css">
 <?php
-include "db.php";
+include "connect.php";
 
 $id = $_GET['id'];
 

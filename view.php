@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="style.css">
 <?php
-include "db.php";
+include "connect.php";
 ?>
 
-<h2>User List</h2>
+<h2 style= margin-top:40px>User List</h2>
 
 <table border="1">
 <tr>
@@ -28,7 +28,6 @@ while($row = mysqli_fetch_assoc($result))
     <td><?php echo $row['name']; ?></td>
     <td><?php echo $row['email']; ?></td>
 
-```
 <td>
     <a href="edit.php?id=<?php echo $row['id']; ?>">
         Edit
@@ -40,7 +39,7 @@ while($row = mysqli_fetch_assoc($result))
         Delete
     </a>
 </td>
-```
+
 
 </tr>
 

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="style.css">
 
 <?php
-include "db.php";
+include "connect.php";
 
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -14,10 +14,6 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
           </script>";
     exit;
 }
-
-/* secure input */
-$name = mysqli_real_escape_string($conn, $name);
-$email = mysqli_real_escape_string($conn, $email);
 
 /* insert query */
 $sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
